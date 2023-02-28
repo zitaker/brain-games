@@ -9,4 +9,5 @@ def main():
 if __name__ == '__main__':
     main()
 
+print('brain-games')
 welcome_user()

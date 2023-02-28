@@ -1,21 +1,35 @@
+from brain_games.cli import welcome_user
+
+
+print('brain-even')
+welcome_user()
+
+print('1111111111')
+print(name)
+print('2222222222')
+
 print('Answer "yes" if the number is even, '
       'otherwise answer "no".')
 
 question_numbers = [15, 6, 7]
-# print('Question:', question_numbers[1])
+# numbers равен элементу в списке question_numbers
+for numbers in question_numbers:
+    print('Question', numbers)
 
-if question_numbers[0] % 2 == 0:
-      if input() == 'yes':
-            print('четное')
-      print('четное2')
-else:
-      if input() == 'no':
-            print('нечетное')
-      print('нечетное2')
+    if numbers % 2 == 0:
+        if input('Your answer: ') == 'yes':
+            print('Correct!')
+        else:
+            print("'yes' is wrong answer ;(."
+                  " Correct answer was 'no'. "
+                  "Let's try again, Bill!")
 
-# numbers = int(input('Your answer: '))
-#
-# if numbers % 2 == 0:
-#     print('четное')
-# else:
-#     print('нечетное')
+    else:
+        if input('Your answer: ') == 'no':
+            print('Correct!')
+        else:
+            print("'yes' is wrong answer ;(."
+                  " Correct answer was 'no'. "
+                  "Let's try again, Bill!")
+
+print('Congratulations, Bill!')

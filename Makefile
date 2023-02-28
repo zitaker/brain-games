@@ -1,8 +1,10 @@
-install: # установить зависимости
+# установить зависимости
+install:
 	poetry install
 
-package-remove: # для автоматического удаления предыдущего пакета
-        python3 -m pip uninstall hexlet-code
+# для автоматического удаления предыдущего пакета
+package-remove:
+    python3 -m pip uninstall hexlet-code
 
 brain-games:
 	poetry run brain-games
@@ -16,7 +18,6 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-
 make lint:
     poetry run flake8 brain_games
-
+    poetry run flake8 brain_even
