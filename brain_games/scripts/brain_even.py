@@ -1,12 +1,11 @@
-from brain_games.cli import welcome_user
+import prompt
 
 
 print('brain-even')
-welcome_user()
 
-print('1111111111')
-print(name)
-print('2222222222')
+print('Welcome to the Brain Games!')
+name = prompt.string('May I have your name? ')
+print(f'{"Hello, " + name + "!"}')
 
 print('Answer "yes" if the number is even, '
       'otherwise answer "no".')
@@ -22,7 +21,7 @@ for numbers in question_numbers:
         else:
             print("'yes' is wrong answer ;(."
                   " Correct answer was 'no'. "
-                  "Let's try again, Bill!")
+                  "Let's try again, " + name + '!')
 
     else:
         if input('Your answer: ') == 'no':
@@ -30,6 +29,7 @@ for numbers in question_numbers:
         else:
             print("'yes' is wrong answer ;(."
                   " Correct answer was 'no'. "
-                  "Let's try again, Bill!")
+                  "Let's try again, " + name + '!')
 
-print('Congratulations, Bill!')
+
+print('Congratulations, ' + name + '!')
