@@ -1,23 +1,23 @@
 install:
 	poetry install
 
-package-remove:
-    python3 -m pip uninstall hexlet-code
-
 brain-games:
-    poetry run brain-games
+	poetry run brain-games
 
 brain-even:
-    poetry run brain-even
+	poetry run brain-even
+
+package-remove:
+	python3 -m pip uninstall hexlet-code
 
 build:
-    poetry build
+	poetry build
 
 publish:
-    poetry publish --dry-run
+	poetry publish --dry-run
 
 package-install:
-    python3 -m pip install --user dist/*.whl
+	python3 -m pip install --user dist/*.whl
 
 make lint:
-    poetry run flake8 brain_games
+	poetry run flake8 brain_games
