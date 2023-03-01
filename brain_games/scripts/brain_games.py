@@ -8,6 +8,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-print('9999999999999')
+
 print('brain-games')
 welcome_user()
