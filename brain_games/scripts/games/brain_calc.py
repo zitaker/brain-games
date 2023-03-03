@@ -1,19 +1,22 @@
 # !/usr/bin/env python3
-from brain_games.greeting_welcome import qwerty
-
-qwerty()
-
-# from pprint import pprint
-# import sys
-# print(sys.path)
+import prompt
 
 
-# from .. import greeting_welcome
+print('brain-calc')
+def welcome_user():
+    print('Welcome to the Brain Games!')
+    names = prompt.string('May I have your name? ')
+    print(f'{"Hello, " + names + "!"}')
+    return names
 
-# import sys
-# sys.path.append(r'/python-project-49/brain_games/scripts')
-# import scripts.greeting_welcome.py
-# import pprint
+# name = welcome_user()
 
-# import greeting_welcome
-# scripts.greeting_welcome.qwerty()
+print('What is the result of the expression?')
+
+calculations = [4 + 10, 5 + 2]
+
+print('Question: 4 + 10')
+calculation_calculator = input('Your answer: ')
+print(calculations[1])
+
+
