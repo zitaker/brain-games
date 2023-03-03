@@ -1,8 +1,11 @@
 # !/usr/bin/env python3
+from brain_games.greeting_welcome import qwerty
 
-from pprint import pprint
-import sys
-print(sys.path)
+qwerty()
+
+# from pprint import pprint
+# import sys
+# print(sys.path)
 
 
 # from .. import greeting_welcome
