@@ -36,17 +36,19 @@ def types_operation():
     return result_expression
 
 
-result_expressions = types_operation()
+life = 2
+while life > 0:
+    result_expressions = types_operation()
+    def checking_answers():
+        answer = int(input('Your answer: '))
 
-def checking_answers():
-    answer = int(input('Your answer: '))
-
-    if answer == result_expressions:
-        print('Correct!')
-    else:
-        print(f"'{answer}'", "is wrong answer ;(. "
-                             "Correct answer was", f"'{result_expressions}'" + ". "
-                             "Let's try again,", name + "!")
+        if answer == result_expressions:
+            print('Correct!')
+        else:
+            print(f"'{answer}'", "is wrong answer ;(. "
+                                 "Correct answer was", f"'{result_expressions}'" + ". "
+                                 "Let's try again,", name + "!")
 
 
-checking_answers()
+    life = life - 1
+    checking_answers()
