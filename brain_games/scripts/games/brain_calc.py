@@ -1,5 +1,4 @@
 # !/usr/bin/env python3
-import operator
 import prompt
 from random import randint
 
@@ -15,6 +14,7 @@ def welcome_user_calc():
 
 
 name = welcome_user_calc()
+
 
 def types_operation():
     number_1 = randint(0, 10)
@@ -36,19 +36,26 @@ def types_operation():
     return result_expression
 
 
-life = 2
-while life > 0:
-    result_expressions = types_operation()
-    def checking_answers():
+def checking_answers():
+    # life - кол-во жизней
+    life = 3
+    while life > 0:
+        life = life - 1
+        result_expressions = types_operation()
         answer = int(input('Your answer: '))
 
         if answer == result_expressions:
             print('Correct!')
         else:
-            print(f"'{answer}'", "is wrong answer ;(. "
-                                 "Correct answer was", f"'{result_expressions}'" + ". "
-                                 "Let's try again,", name + "!")
+            print(f"'{answer}'",
+                  "is wrong answer ;(. "
+                  "Correct answer was",
+                  f"'{result_expressions}'" + ". "
+                  "Let's try again,", name + "!")
+            break
+
+        if life <= 0:
+            print('Congratulations, ' + name + '!')
 
 
-    life = life - 1
-    checking_answers()
+checking_answers()
