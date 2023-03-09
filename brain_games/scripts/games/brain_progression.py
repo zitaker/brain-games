@@ -1,5 +1,5 @@
 # !/usr/bin/env python3
-import prompt
+# import prompt
 from random import randint
 
 
@@ -13,29 +13,32 @@ from random import randint
 #
 #
 # name = welcome_user_progression()
-
-progression_1 = randint(1, 10)
-progression_2 = randint(1, 20)
-progression_3 = randint(1, 200)
-
-
-try:
-    i = (list(range(progression_2, progression_3, progression_1)))
-    print(i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9])
-# except IndexError:
-except IndexError:
-    print('qwerty 1')
-    print(i[0], i[1], i[2], i[3], i[4], i[5])
+def arithmetic_progression():
+    progression_1 = randint(1, 10)
+    progression_2 = randint(1, 10)
+    progression_3 = randint(100, 200)
+    index = (list(range(progression_2, progression_3, progression_1)))
+    return index
 
 
+i = arithmetic_progression()
 
 
+def result_progression():
+    min_progression = 5
+    max_progression = randint(0, 10)
+    progression = (i[0:min_progression] +
+                   i[min_progression:max_progression])
+    print(progression)
+    print(" ".join(map(str, progression)))
+    number_input = randint(0, max_progression)
+    print(number_input)
 
-# progression_length = 0
-# while progression_length <= 2:
-#     progression_2 = (progression_2 + progression_1)
-#     progression_length = progression_length + 1
-#     print(progression_2)
+# result_progression()
 
-
+# a = ('1, 2, 3')
+a = '[1, 2, 3]'
+# x = a.replace('2', '//')
+x = a.replace(a[4], '//')
+print(x)
 
