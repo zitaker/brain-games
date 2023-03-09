@@ -8,7 +8,6 @@ def welcome_user_even():
     print('Welcome to the Brain Games!')
     names = prompt.string('May I have your name? ')
     print(f'{"Hello, " + names + "!"}')
-
     print('Answer "yes" if the number is even, '
           'otherwise answer "no".')
     return names

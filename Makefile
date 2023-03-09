@@ -13,6 +13,9 @@ brain-calc:
 brain-gcd:
 	poetry run brain-gcd
 
+brain-progression:
+	poetry run brain-progression
+
 package-remove:
 	python3 -m pip uninstall hexlet-code
 

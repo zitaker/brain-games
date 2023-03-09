@@ -8,7 +8,6 @@ def welcome_user_calc():
     print('Welcome to the Brain Games!')
     names = prompt.string('May I have your name? ')
     print(f'{"Hello, " + names + "!"}')
-
     print('What is the result of the expression?')
     return names
 

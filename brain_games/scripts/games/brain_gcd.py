@@ -9,14 +9,11 @@ def welcome_user_gcd():
     print('Welcome to the Brain Games!')
     names = prompt.string('May I have your name? ')
     print(f'{"Hello, " + names + "!"}')
-
-    print('What is the result of the expression?')
+    print('Find the greatest common divisor of given numbers.')
     return names
 
 
 name = welcome_user_gcd()
-
-print('Find the greatest common divisor of given numbers.')
 
 
 def checking_answers_qcd():
