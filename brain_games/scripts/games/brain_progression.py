@@ -27,18 +27,15 @@ i = arithmetic_progression()
 def result_progression():
     min_progression = 5
     max_progression = randint(0, 10)
-    progression = (i[0:min_progression] +
-                   i[min_progression:max_progression])
-    print(progression)
-    print(" ".join(map(str, progression)))
-    number_input = randint(0, max_progression)
-    print(number_input)
+    progression = (i[0:min_progression] + i[min_progression:max_progression])
 
-# result_progression()
+    num_input = randint(0, max_progression)
+    print(num_input)
+    print(progression[num_input])
 
-# a = ('1, 2, 3')
-a = '[1, 2, 3]'
-# x = a.replace('2', '//')
-x = a.replace(a[4], '//')
-print(x)
+    progres_str = (" ".join(map(str, progression)))
+    num_replace = str(progres_str).replace(str(progression[num_input]), '..')
+    print(num_replace)
 
+
+result_progression()
