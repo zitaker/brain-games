@@ -3,17 +3,16 @@ import prompt
 from random import randint
 
 
-# def welcome_user_progression():
-#     print('brain-progression')
-#     print('Welcome to the Brain Games!')
-#     names = prompt.string('May I have your name? ')
-#     print(f'{"Hello, " + names + "!"}')
-#     print('What number is missing in the progression?')
-#     return names
-#
-#
-# name = welcome_user_progression()
-name = 'qwerty123'
+def welcome_user_progression():
+    print('brain-progression')
+    print('Welcome to the Brain Games!')
+    names = prompt.string('May I have your name? ')
+    print(f'{"Hello, " + names + "!"}')
+    print('What number is missing in the progression?')
+    return names
+
+
+name = welcome_user_progression()
 
 
 def result_progression():
@@ -36,11 +35,9 @@ def result_progression():
         progres = (i[0:min_progression] + i[min_progression:max_progression])
 
         num_input = randint(0, max_progression)
-        print(progres[num_input])
 
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
-        #  num_replace = str(progres_str).replace(str(progres[num_input]), '..')
         print(num_replace)
 
         comparison_num_input = int(input('Your answer: '))
