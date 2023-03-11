@@ -31,10 +31,12 @@ def result_progression():
         i = arithmetic_progression()
 
         min_progression = 5
-        max_progression = randint(0, 10)
+        max_progression = randint(1, 10)
+        #   progres - рандомный список
         progres = (i[0:min_progression] + i[min_progression:max_progression])
 
-        num_input = randint(0, max_progression)
+        #   num_input - номер числа по индексу в рандомном списке
+        num_input = randint(0, max_progression - 1)
 
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
