@@ -15,25 +15,32 @@ def welcome_user_prime():
 name = welcome_user_prime()
 
 
+n = 100
+
+
+def simple_number_list():
+    simple_numbers = []
+    for i in range(2, n + 1):
+        for j in range(2, i):
+            if i % j == 0:
+                break
+        else:
+            simple_numbers.append(i)
+    return simple_numbers
+
+
+simple_numbers = simple_number_list()
+
+
 def result_prime():
     # life - кол-во жизней
     life = 3
     while life > 0:
         life = life - 1
+        numbers = randint(0, 100)
+        print('Question:', numbers)
 
         def numbers_verification():
-
-            numbers = randint(0, 100)
-            print('Question:', numbers)
-
-            simple_numbers = []
-            for i in range(2, numbers + 1):
-                for j in range(2, i):
-                    if i % j == 0:
-                        break
-                else:
-                    simple_numbers.append(i)
-
             if numbers in simple_numbers:
                 return True
             else:
@@ -66,8 +73,10 @@ def result_prime():
                       "Let's try again,", name + "!")
                 break
 
-    if life <= 0:
-        print('Congratulations, ' + name + '!')
+    return life
 
 
-result_prime()
+life = result_prime()
+
+if life <= 0:
+    print('Congratulations, ' + name + '!')
