@@ -3,61 +3,71 @@ import prompt
 from random import randint
 
 
-# def welcome_user_prime():
-#     print('brain-prime')
-#     print('Welcome to the Brain Games!')
-#     names = prompt.string('May I have your name? ')
-#     print(f'{"Hello, " + names + "!"}')
-#     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-#     return names
-#
-#
-# name = welcome_user_prime()
-name = '1234567890'
+def welcome_user_prime():
+    print('brain-prime')
+    print('Welcome to the Brain Games!')
+    names = prompt.string('May I have your name? ')
+    print(f'{"Hello, " + names + "!"}')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    return names
 
 
-def numbers_verification():
-
-    numbers = randint(0, 100)
-    print('Question:', numbers)
-    # numbers = 85
-
-    if numbers == 2:
-        print('это простое число')
-        return True
-    elif numbers <= 1:
-        print('неправильно numbers <= 1')
-        return False
-    elif numbers % 2 == 0:
-        print('неправильно numbers % 2 == 0')
-        return False
-    elif numbers / 1 / numbers == 1:
-        print('это простое число numbers / 1 / numbers == 1')
-        return True
-    return numbers
+name = welcome_user_prime()
 
 
-number = numbers_verification()
-print(number)
+def result_prime():
+    # life - кол-во жизней
+    life = 3
+    while life > 0:
+        life = life - 1
 
-numbers_input = input('Your answer: ')
+        def numbers_verification():
 
-if number == True:
-    if numbers_input == 'yes':
-        print('Correct!')
-    else:
-        print(f"'{numbers_input}'",
-              "is wrong answer ;(. "
-              "Correct answer was",
-              f"'{'yes'}'" + ". "
-              "Let's try again,", name + "!")
+            numbers = randint(0, 100)
+            print('Question:', numbers)
 
-if number == False:
-    if numbers_input == 'no':
-        print('Correct!')
-    else:
-        print(f"'{numbers_input}'",
-              "is wrong answer ;(. "
-              "Correct answer was",
-              f"'{'no'}'" + ". "
-              "Let's try again,", name + "!")
+            simple_numbers = []
+            for i in range(2, numbers + 1):
+                for j in range(2, i):
+                    if i % j == 0:
+                        break
+                else:
+                    simple_numbers.append(i)
+
+            if numbers in simple_numbers:
+                return True
+            else:
+                return False
+
+            return numbers
+
+        numbers = numbers_verification()
+
+        numbers_input = input('Your answer: ')
+        if numbers is True:
+            if numbers_input == 'yes':
+                print('Correct!')
+            else:
+                print(f"'{numbers_input}'",
+                      "is wrong answer ;(. "
+                      "Correct answer was",
+                      f"'{'yes'}'" + ". "
+                      "Let's try again,", name + "!")
+                break
+
+        if numbers is False:
+            if numbers_input == 'no':
+                print('Correct!')
+            else:
+                print(f"'{numbers_input}'",
+                      "is wrong answer ;(. "
+                      "Correct answer was",
+                      f"'{'no'}'" + ". "
+                      "Let's try again,", name + "!")
+                break
+
+    if life <= 0:
+        print('Congratulations, ' + name + '!')
+
+
+result_prime()
