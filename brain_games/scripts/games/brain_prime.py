@@ -51,27 +51,17 @@ def result_prime():
         numbers = numbers_verification()
 
         numbers_input = input('Your answer: ')
-        if numbers is True:
-            if numbers_input == 'yes':
-                print('Correct!')
-            else:
-                print(f"'{numbers_input}'",
-                      "is wrong answer ;(. "
-                      "Correct answer was",
-                      f"'{'yes'}'" + ". "
-                      "Let's try again,", name + "!")
-                break
-
-        if numbers is False:
-            if numbers_input == 'no':
-                print('Correct!')
-            else:
-                print(f"'{numbers_input}'",
-                      "is wrong answer ;(. "
-                      "Correct answer was",
-                      f"'{'no'}'" + ". "
-                      "Let's try again,", name + "!")
-                break
+        if (numbers is True) and (numbers_input == 'yes'):
+            print('Correct!')
+        elif (numbers is False) and (numbers_input == 'no'):
+            print('Correct!')
+        else:
+            print(f"'{numbers_input}'",
+                  "is wrong answer ;(. "
+                  "Correct answer was",
+                  f"'{numbers}'" + ". "
+                  "Let's try again,", name + "!")
+            break
 
     return life
 
