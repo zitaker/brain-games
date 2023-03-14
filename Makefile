@@ -19,9 +19,6 @@ brain-progression:
 brain-prime:
 	poetry run brain-prime
 
-package-remove:
-	python3 -m pip uninstall hexlet-code
-
 build:
 	poetry build
 
