@@ -17,3 +17,7 @@ After successful installation, enter the name of the game:
 ```brain-gcd``` https://asciinema.org/a/41YklAOKQWcSZByT2GdYwY4Wc  
 ```brain-progression``` https://asciinema.org/a/FNUpbOPTC0tQXvS7aWFqOxikF  
 ```brain-prime``` https://asciinema.org/a/ERQPEC650ojeEWBQCkGsREksb 
+
+### Minimum requirements:
+1) Linux os.  
+2) python 3.8.1  
