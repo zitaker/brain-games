@@ -42,31 +42,19 @@ def result_prime():
 
         def numbers_verification():
             if numbers in simple_numbers:
-                return True
-            else:
-                return False
+                correct = 'yes'
+            elif numbers not in simple_numbers:
+                correct = 'no'
 
-            return numbers
+            return correct
 
-        numbers = numbers_verification()
+        correct = numbers_verification()
 
         numbers_input = input('Your answer: ')
 
-        if (numbers is True) and (numbers_input == 'yes')\
-                or\
-                (numbers is False) and (numbers_input == 'no'):
+        if numbers_input == correct:
             print('Correct!')
-
-        if (numbers is True) and (numbers_input != 'yes'):
-            correct = 'yes'
-            print(f"'{numbers_input}'",
-                  "is wrong answer ;(. "
-                  "Correct answer was",
-                  f"'{correct}'" + ". "
-                  "Let's try again,", name + "!")
-            break
-        elif (numbers is False) and (numbers_input != 'no'):
-            correct = 'no'
+        else:
             print(f"'{numbers_input}'",
                   "is wrong answer ;(. "
                   "Correct answer was",
