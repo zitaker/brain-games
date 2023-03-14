@@ -20,4 +20,5 @@ After successful installation, enter the name of the game:
 
 ### Minimum requirements:
 1) Linux os.  
-2) python 3.8.1  
+2) python 3.8.1.  
+3) pip.  
