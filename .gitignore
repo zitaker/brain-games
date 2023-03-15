@@ -1,7 +1,6 @@
 .venv/
 dist/
 __pycache__/
-__init__.py
 .pyproject.toml.swp
 .README.md.swp
 .README.md.swo
