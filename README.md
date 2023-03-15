@@ -8,7 +8,7 @@ Welcome to the Brain Games!
 2) Go to the root directory of the project.
 3) Install it with the command:
 ```
-python3 -m pip install --user dist/*.whl
+make
 ```
 After successful installation, enter the name of the game:  
 
