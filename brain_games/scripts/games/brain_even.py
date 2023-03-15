@@ -54,8 +54,11 @@ def life_user():
 
         if correct_response < 0:
             break
-        else:
-            print('Congratulations, ' + name + '!')
+
+    return life
 
 
-life_user()
+life = life_user()
+
+if life <= 0:
+    print('Congratulations, ' + name + '!')
