@@ -22,7 +22,7 @@ def life_user():
     while life > 0:
         life = life - 1
         #   randint - задать random число в промежутке
-        question_numbers = randint(0, 10)
+        question_numbers = randint(0, 100)
         #   correct_response - считать ответы
         correct_response = 0
         print('Question:', question_numbers)
