@@ -3,9 +3,17 @@ import prompt
 from random import randint
 
 
-def welcome_user_calc():
-    print('brain-calc')
+print('brain-calc')
+
+
+def main():
     print('Welcome to the Brain Games!')
+
+
+main()
+
+
+def welcome_user_calc():
     names = prompt.string('May I have your name? ')
     print(f'{"Hello, " + names + "!"}')
     print('What is the result of the expression?')

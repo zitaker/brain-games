@@ -4,9 +4,17 @@ import math
 from random import randint
 
 
-def welcome_user_gcd():
-    print('brain-gcd')
+print('brain-gcd')
+
+
+def main():
     print('Welcome to the Brain Games!')
+
+
+main()
+
+
+def welcome_user_gcd():
     names = prompt.string('May I have your name? ')
     print(f'{"Hello, " + names + "!"}')
     print('Find the greatest common divisor of given numbers.')

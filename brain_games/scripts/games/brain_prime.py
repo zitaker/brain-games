@@ -3,9 +3,17 @@ import prompt
 from random import randint
 
 
-def welcome_user_prime():
-    print('brain-prime')
+print('brain-prime')
+
+
+def main():
     print('Welcome to the Brain Games!')
+
+
+main()
+
+
+def welcome_user_prime():
     names = prompt.string('May I have your name? ')
     print(f'{"Hello, " + names + "!"}')
     print('Answer "yes" if given number is prime. Otherwise answer "no".')

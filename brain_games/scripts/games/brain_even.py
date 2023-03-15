@@ -3,9 +3,17 @@ import prompt
 from random import randint
 
 
-def welcome_user_even():
-    print('brain-even')
+print('brain-even')
+
+
+def main():
     print('Welcome to the Brain Games!')
+
+
+main()
+
+
+def welcome_user_even():
     names = prompt.string('May I have your name? ')
     print(f'{"Hello, " + names + "!"}')
     print('Answer "yes" if the number is even, '
