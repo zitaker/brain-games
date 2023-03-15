@@ -1,4 +1,14 @@
 .venv/
 dist/
 __pycache__/
-12345/
+__init__.py
+.pyproject.toml.swp
+.README.md.swp
+.README.md.swo
+.README.md.swn
+.README.md.swm
+.README.md.swl
+.README.md.swk
+.README.md.swj
+.README.md.swi
+.R.swp
