@@ -26,7 +26,7 @@ name = welcome_user_progression()
 def result_progression():
     # life - кол-во жизней
     life = 3
-    while life > 0:
+    while life != 0:
         life = life - 1
 
         def arithmetic_progression():
@@ -54,6 +54,7 @@ def result_progression():
 
         if comparison_num_input == progres[num_input]:
             print('Correct!')
+
         elif comparison_num_input != progres[num_input]:
             print(f"'{comparison_num_input}'",
                   "is wrong answer ;(. "
@@ -63,7 +64,7 @@ def result_progression():
             break
 
         if life <= 0:
-            print('Congratulations, ' + name + '!')
+            print('Congratulations1111, ' + name + '!')
 
 
 result_progression()
