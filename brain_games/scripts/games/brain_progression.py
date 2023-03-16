@@ -33,8 +33,8 @@ def result_progression():
             progression_1 = randint(1, 10)
             progression_2 = randint(1, 10)
             progression_3 = randint(100, 150)
-            index = (list(range(progression_2, progression_3, progression_1)))
-            return index
+            i = (list(range(progression_2, progression_3, progression_1)))
+            return i
 
         i = arithmetic_progression()
 
