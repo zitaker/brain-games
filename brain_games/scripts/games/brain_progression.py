@@ -54,7 +54,7 @@ def result_progression():
 
         if comparison_num_input == progres[num_input]:
             print('Correct!')
-        else:
+        elif comparison_num_input != progres[num_input]:
             print(f"'{comparison_num_input}'",
                   "is wrong answer ;(. "
                   "Correct answer was",
