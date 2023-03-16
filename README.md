@@ -6,10 +6,10 @@ Welcome to the Brain Games!
 ### Install:  
 1) Download the project.
 2) Go to the root directory of the project.
-3) Install it with the command:
-```
-make
-```
+3) Install it with the command:  
+
+```make```  
+
 After successful installation, enter the name of the game:  
 
 ```brain-even``` https://asciinema.org/a/aWnomMkI6AwLGLI8DrvdVOBkz    

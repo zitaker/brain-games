@@ -32,7 +32,7 @@ def result_progression():
         def arithmetic_progression():
             progression_1 = randint(1, 10)
             progression_2 = randint(1, 10)
-            progression_3 = randint(100, 200)
+            progression_3 = randint(100, 150)
             index = (list(range(progression_2, progression_3, progression_1)))
             return index
 
@@ -50,7 +50,7 @@ def result_progression():
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
         print(num_replace)
 
-        comparison_num_input = int(input('Your answer: '))
+        comparison_num_input = int(input('Your answer:'))
         if comparison_num_input == progres[num_input]:
             print('Correct!')
         else:
