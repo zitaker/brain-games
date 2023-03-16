@@ -54,6 +54,9 @@ def result_progression():
 
         if comparison_num_input == progres[num_input]:
             print('Correct!')
+            if life == 0:
+                print('Congratulations1111, ' + name + '!')
+                break
 
         elif comparison_num_input != progres[num_input]:
             print(f"'{comparison_num_input}'",
@@ -62,9 +65,6 @@ def result_progression():
                   f"'{progres[num_input]}'" + ". "
                   "Let's try again,", name + "!")
             break
-
-        if life <= 0:
-            print('Congratulations1111, ' + name + '!')
 
 
 result_progression()
