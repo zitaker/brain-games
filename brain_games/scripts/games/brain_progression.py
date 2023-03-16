@@ -52,17 +52,15 @@ def result_progression():
 
         comparison_num_input = int(input('Your answer: '))
 
-        def qwerty():
-            if comparison_num_input == progres[num_input]:
-                print('Correct!')
-            else:
-                print(f"'{comparison_num_input}'",
-                      "is wrong answer ;(. "
-                      "Correct answer was",
-                      f"'{progres[num_input]}'" + ". "
-                      "Let's try again,", name + "!")
-                exit()
-        qwerty()
+        if comparison_num_input == progres[num_input]:
+            print('Correct!')
+        else:
+            print(f"'{comparison_num_input}'",
+                  "is wrong answer ;(. "
+                  "Correct answer was",
+                  f"'{progres[num_input]}'" + ". "
+                  "Let's try again,", name + "!")
+            break
 
         if life <= 0:
             print('Congratulations, ' + name + '!')
