@@ -49,17 +49,21 @@ def result_progression():
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
         print(num_replace)
+        print(progres[num_input])
 
-        comparison_num_input = int(input('Your answer:'))
-        if comparison_num_input == progres[num_input]:
-            print('Correct!')
-        else:
-            print(f"'{comparison_num_input}'",
-                  "is wrong answer ;(. "
-                  "Correct answer was",
-                  f"'{progres[num_input]}'" + ". "
-                  "Let's try again,", name + "!")
-            break
+        comparison_num_input = int(input('Your answer: '))
+
+        def qwerty():
+            if comparison_num_input == progres[num_input]:
+                print('Correct!')
+            else:
+                print(f"'{comparison_num_input}'",
+                      "is wrong answer ;(. "
+                      "Correct answer was",
+                      f"'{progres[num_input]}'" + ". "
+                      "Let's try again,", name + "!")
+                exit()
+        qwerty()
 
         if life <= 0:
             print('Congratulations, ' + name + '!')
