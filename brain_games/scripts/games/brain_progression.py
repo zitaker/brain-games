@@ -25,16 +25,10 @@ name = welcome_user_progression()
 
 def result_progression():
     # life - кол-во жизней
-    # life = 4
-    # while life > 0:
-    #     life = life - 1
-    #     if life == 0:
-    #         print('Congratulations ' + name + '!')
-    #         break
-    x = 0
+    n = 0
     life = 3
     for life in range(0, life + 1):
-        x += life
+        n += life
         if life == 3:
             print('Congratulations ' + name + '!')
             break
@@ -48,7 +42,7 @@ def result_progression():
 
         i = arithmetic_progression()
 
-        min_progression = 5
+        min_progression = 6
         max_progression = randint(1, 10)
         #   progres - рандомный список
         progres = (i[0:min_progression] + i[min_progression:max_progression])
@@ -59,12 +53,10 @@ def result_progression():
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
         print(num_replace)
-        print(progres[num_input])
 
         comparison_num_input = int(input('Your answer: '))
         if comparison_num_input is progres[num_input]:
             print('Correct!')
-            continue
         elif comparison_num_input is not progres[num_input]:
             print(f"'{comparison_num_input}'",
                   "is wrong answer ;(. "
@@ -72,17 +64,6 @@ def result_progression():
                   f"'{progres[num_input]}'" + ". "
                   "Let's try again,", name + "!")
             break
-        # comparison_num_input = int(input('Your answer: '))
-        # if comparison_num_input == progres[num_input]:
-        #     print('Correct!')
-        #     continue
-        # elif comparison_num_input != progres[num_input]:
-        #     print(f"'{comparison_num_input}'",
-        #           "is wrong answer ;(. "
-        #           "Correct answer was",
-        #           f"'{progres[num_input]}'" + ". "
-        #           "Let's try again,", name + "!")
-        #     break
 
 
 result_progression()
