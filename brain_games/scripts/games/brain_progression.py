@@ -50,8 +50,9 @@ def result_progression():
         #   num_input - номер числа по индексу в рандомном списке
         num_input = randint(0, max_progres - 1)
 
+        points = '..'
         progres_str = (" ".join(map(str, progres)))
-        num_replace = str(progres_str).replace(str(progres[num_input]), '..')
+        num_replace = str(progres_str).replace(str(progres[num_input]), points)
         print(num_replace)
         print(progres[num_input])
 
