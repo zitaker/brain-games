@@ -42,15 +42,18 @@ def result_progression():
 
         i = arithmetic_progression()
 
+        min_progres = 5
+        max_progres = randint(0, 10)
         #   progres - список
-        progres = (i[0:10])
+        progres = (i[0:min_progres]) + (i[min_progres:max_progres])
 
         #   num_input - номер числа по индексу в рандомном списке
-        num_input = randint(0, 9)
+        num_input = randint(0, max_progres - 1)
 
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
         print(num_replace)
+        print(progres[num_input])
 
         comparison_num_input = int(input('Your answer: '))
         if comparison_num_input is progres[num_input]:
