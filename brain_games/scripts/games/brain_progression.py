@@ -56,26 +56,33 @@ def result_progression():
         #   num_input - номер числа по индексу в рандомном списке
         num_input = randint(0, max_progression - 1)
 
-        def qwerty():
-            progres_str = (" ".join(map(str, progres)))
-            return progres_str
-        progres_str = qwerty()
-
+        progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
         print(num_replace)
-        print(progres[num_input])
+        # print(progres[num_input])
 
         comparison_num_input = int(input('Your answer: '))
-        if comparison_num_input == progres[num_input]:
+        if comparison_num_input is progres[num_input]:
             print('Correct!')
             continue
-        elif comparison_num_input != progres[num_input]:
+        elif comparison_num_input is not progres[num_input]:
             print(f"'{comparison_num_input}'",
                   "is wrong answer ;(. "
                   "Correct answer was",
                   f"'{progres[num_input]}'" + ". "
                   "Let's try again,", name + "!")
             break
+        # comparison_num_input = int(input('Your answer: '))
+        # if comparison_num_input == progres[num_input]:
+        #     print('Correct!')
+        #     continue
+        # elif comparison_num_input != progres[num_input]:
+        #     print(f"'{comparison_num_input}'",
+        #           "is wrong answer ;(. "
+        #           "Correct answer was",
+        #           f"'{progres[num_input]}'" + ". "
+        #           "Let's try again,", name + "!")
+        #     break
 
 
 result_progression()
