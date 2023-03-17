@@ -33,9 +33,9 @@ def result_progression():
     #         break
     x = 0
     life = 3
-    for life in range(1, life + 1):
+    for life in range(0, life + 1):
         x += life
-        if life > 3:
+        if life == 3:
             print('Congratulations ' + name + '!')
             break
 
@@ -56,9 +56,14 @@ def result_progression():
         #   num_input - номер числа по индексу в рандомном списке
         num_input = randint(0, max_progression - 1)
 
-        progres_str = (" ".join(map(str, progres)))
+        def qwerty():
+            progres_str = (" ".join(map(str, progres)))
+            return progres_str
+        progres_str = qwerty()
+
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
         print(num_replace)
+        print(progres[num_input])
 
         comparison_num_input = int(input('Your answer: '))
         if comparison_num_input == progres[num_input]:
