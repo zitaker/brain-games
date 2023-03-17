@@ -25,10 +25,17 @@ name = welcome_user_progression()
 
 def result_progression():
     # life - кол-во жизней
-    life = 4
-    while life > 0:
-        life = life - 1
-        if life == 0:
+    # life = 4
+    # while life > 0:
+    #     life = life - 1
+    #     if life == 0:
+    #         print('Congratulations ' + name + '!')
+    #         break
+    x = 0
+    life = 3
+    for life in range(1, life + 1):
+        x += life
+        if life > 3:
             print('Congratulations ' + name + '!')
             break
 
@@ -52,7 +59,6 @@ def result_progression():
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), '..')
         print(num_replace)
-        print(progres[num_input])
 
         comparison_num_input = int(input('Your answer: '))
         if comparison_num_input == progres[num_input]:
