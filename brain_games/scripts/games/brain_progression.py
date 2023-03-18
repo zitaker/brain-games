@@ -55,7 +55,7 @@ def result_progression():
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), points)
         print(num_replace)
-        print(progres[num_input])
+        print(int(progres[num_input]))
 
         comparison_num_input = int(input('Your answer: '))
         if comparison_num_input is progres[num_input]:
