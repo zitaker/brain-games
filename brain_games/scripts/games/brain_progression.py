@@ -34,10 +34,19 @@ def result_progression():
             break
 
         def arithmetic_progression():
+            # progression_1 = randint(1, 10)
+            # progression_2 = randint(1, 10)
+            # progression_3 = randint(100, 150)
+            # i = (list(range(progression_2, progression_3, progression_1)))
+
             progression_1 = randint(1, 10)
-            progression_2 = randint(1, 10)
-            progression_3 = randint(100, 150)
-            i = (list(range(progression_2, progression_3, progression_1)))
+            progression_2 = randint(1, 200)
+            i = []
+            y = 10
+            for y in range(1, y + 1, 1):
+                progression_2 = progression_2 + progression_1
+                i.append(progression_2)
+
             return i
 
         i = arithmetic_progression()
@@ -61,18 +70,31 @@ def result_progression():
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), points)
         print(num_replace)
-        print(progres[num_input])
+        # print(type(progres[num_input]), progres[num_input])
+        qwerty = str(progres[num_input])
+        # print(type(qwerty), qwerty)
 
-        comparison_num_input = int(input('Your answer: '))
-        if comparison_num_input is progres[num_input]:
+        comparison_num_input = str(input('Your answer: '))
+        if comparison_num_input in qwerty:
             print('Correct!')
-        elif comparison_num_input is not progres[num_input]:
+        elif comparison_num_input not in qwerty:
             print(f"'{comparison_num_input}'",
                   "is wrong answer ;(. "
                   "Correct answer was",
                   f"'{progres[num_input]}'" + ". "
                   "Let's try again,", name + "!")
             break
+
+        # comparison_num_input = int(input('Your answer: '))
+        # if comparison_num_input is progres[num_input]:
+        #     print('Correct!')
+        # elif comparison_num_input is not progres[num_input]:
+        #     print(f"'{comparison_num_input}'",
+        #           "is wrong answer ;(. "
+        #           "Correct answer was",
+        #           f"'{progres[num_input]}'" + ". "
+        #           "Let's try again,", name + "!")
+        #     break
 
 
 result_progression()
