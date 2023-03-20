@@ -14,14 +14,13 @@ main()
 
 
 def welcome_user_progression():
-    names = prompt.string('May I have your name? ')
-    print(f'{"Hello, " + names + "!"}')
+    name = prompt.string('May I have your name? ')
+    print(f'{"Hello, " + name + "!"}')
     print('What number is missing in the progression?')
-    return names
+    return name
 
 
 name = welcome_user_progression()
-
 
 def result_progression():
     # life - кол-во жизней
@@ -86,7 +85,8 @@ def result_progression():
         #           "Let's try again,", name + "!")
         #     break
 
-        comparison_num_input = int(input('Your answer: '))
+        # comparison_num_input = int(input('Your answer: '))
+        comparison_num_input = progres[num_input]
         if comparison_num_input is progres[num_input]:
             print('Correct!')
         elif comparison_num_input is not progres[num_input]:
