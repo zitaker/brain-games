@@ -6,11 +6,11 @@ from random import randint
 print('brain-even')
 
 
-def main():
-    print('Welcome to the Brain Games!')
-
-
-main()
+# def main():
+#     print('Welcome to the Brain Games!')
+#
+#
+# main()
 
 
 def life_user():
