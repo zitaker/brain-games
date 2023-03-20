@@ -29,7 +29,7 @@ def result_progression():
     for life in range(0, life + 1):
         n += life
         if life == 3:
-            print('Congratulations ' + name + '!')
+            print('Congratulations, ' + name + '!')
             break
 
         def arithmetic_progression():
