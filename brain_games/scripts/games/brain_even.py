@@ -13,60 +13,48 @@ def main():
 main()
 
 
-def welcome_user_even():
-    names = prompt.string('May I have your name? ')
-    print(f'{"Hello, " + names + "!"}')
+def life_user():
+    name = prompt.string('May I have your name? ')
+    print(f'{"Hello, " + name + "!"}')
     print('Answer "yes" if the number is even, '
           'otherwise answer "no".')
-    return names
 
-
-name = welcome_user_even()
-
-
-def life_user():
     # life - кол-во жизней
+    n = 0
     life = 3
-    while life > 0:
-        life = life - 1
+    for life in range(0, life + 1):
+        n += life
+        if life == 3:
+            print('Congratulations, ' + name + '!')
+            break
+
         #   randint - задать random число в промежутке
         question_numbers = randint(0, 100)
-        #   correct_response - считать ответы
-        correct_response = 0
+
         print('Question:', question_numbers)
         even_input = input('Your answer: ')
 
         if question_numbers % 2 == 0:
             if even_input == 'yes':
                 print('Correct!')
-                correct_response = correct_response + 1
             else:
                 print(f"'{even_input}'",
                       "is wrong answer ;(. "
                       "Correct answer was",
                       f"'{'yes'}'" + ". "
                       "Let's try again,", name + "!")
-                correct_response = correct_response - 1
+                break
 
         else:
             if even_input == 'no':
                 print('Correct!')
-                correct_response = correct_response + 1
             else:
                 print(f"'{even_input}'",
                       "is wrong answer ;(. "
                       "Correct answer was",
                       f"'{'no'}'" + ". "
                       "Let's try again,", name + "!")
-                correct_response = correct_response - 1
-
-        if correct_response < 0:
-            break
-
-    return life
+                break
 
 
-life = life_user()
-
-if life <= 0:
-    print('Congratulations, ' + name + '!')
+life_user()

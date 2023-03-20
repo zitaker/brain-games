@@ -13,16 +13,6 @@ def main():
 main()
 
 
-def welcome_user_prime():
-    names = prompt.string('May I have your name? ')
-    print(f'{"Hello, " + names + "!"}')
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    return names
-
-
-name = welcome_user_prime()
-
-
 n = 100
 
 
@@ -41,10 +31,19 @@ simple_numbers = simple_number_list()
 
 
 def result_prime():
+    name = prompt.string('May I have your name? ')
+    print(f'{"Hello, " + name + "!"}')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+
     # life - кол-во жизней
+    n = 0
     life = 3
-    while life > 0:
-        life = life - 1
+    for life in range(0, life + 1):
+        n += life
+        if life == 3:
+            print('Congratulations, ' + name + '!')
+            break
+
         numbers = randint(0, 100)
         print('Question:', numbers)
 
@@ -70,10 +69,5 @@ def result_prime():
                   "Let's try again,", name + "!")
             break
 
-    return life
 
-
-life = result_prime()
-
-if life <= 0:
-    print('Congratulations, ' + name + '!')
+result_prime()

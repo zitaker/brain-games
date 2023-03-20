@@ -13,16 +13,6 @@ def main():
 main()
 
 
-def welcome_user_calc():
-    names = prompt.string('May I have your name? ')
-    print(f'{"Hello, " + names + "!"}')
-    print('What is the result of the expression?')
-    return names
-
-
-name = welcome_user_calc()
-
-
 def types_operation():
     number_1 = randint(0, 10)
     number_2 = randint(0, 10)
@@ -44,6 +34,10 @@ def types_operation():
 
 
 def checking_answers():
+    name = prompt.string('May I have your name? ')
+    print(f'{"Hello, " + name + "!"}')
+    print('What is the result of the expression?')
+
     # life - кол-во жизней
     life = 3
     while life > 0:

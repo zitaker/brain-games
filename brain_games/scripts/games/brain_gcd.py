@@ -14,17 +14,11 @@ def main():
 main()
 
 
-def welcome_user_gcd():
-    names = prompt.string('May I have your name? ')
-    print(f'{"Hello, " + names + "!"}')
-    print('Find the greatest common divisor of given numbers.')
-    return names
-
-
-name = welcome_user_gcd()
-
-
 def checking_answers_qcd():
+    name = prompt.string('May I have your name? ')
+    print(f'{"Hello, " + name + "!"}')
+    print('Find the greatest common divisor of given numbers.')
+
     # life - кол-во жизней
     life = 3
     while life > 0:
