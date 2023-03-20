@@ -68,8 +68,7 @@ def result_progression():
         points = '..'
         progres_str = (" ".join(map(str, progres)))
         num_replace = str(progres_str).replace(str(progres[num_input]), points)
-        print(progres[num_input])
-        print(num_replace)
+        print('Question:', num_replace)
         # print(type(progres[num_input]), progres[num_input])
         # qwerty = str(progres[num_input])        str
         # print(type(qwerty), qwerty)
@@ -85,8 +84,7 @@ def result_progression():
         #           "Let's try again,", name + "!")
         #     break
 
-        # comparison_num_input = int(input('Your answer: '))
-        comparison_num_input = progres[num_input]
+        comparison_num_input = int(input('Your answer: '))
         if comparison_num_input is progres[num_input]:
             print('Correct!')
         elif comparison_num_input is not progres[num_input]:
