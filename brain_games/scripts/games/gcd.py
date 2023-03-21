@@ -1,28 +1,24 @@
-# !/usr/bin/env python3
 import prompt
 import math
 from random import randint
 
 
-print('brain-gcd')
-
-
-# def main():
-#     print('Welcome to the Brain Games!')
-#
-#
-# main()
-
-
 def checking_answers_qcd():
+    print('brain-gcd')
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'{"Hello, " + name + "!"}')
     print('Find the greatest common divisor of given numbers.')
 
     # life - кол-во жизней
+    n = 0
     life = 3
-    while life > 0:
-        life = life - 1
+    for life in range(0, life + 1):
+        n += life
+        if life == 3:
+            print('Congratulations, ' + name + '!')
+            break
+
         numbers_1 = randint(1, 10)
         numbers_2 = randint(1, 10)
 
@@ -40,9 +36,3 @@ def checking_answers_qcd():
                   f"'{result_gcd}'" + ". "
                   "Let's try again,", name + "!")
             break
-
-        if life <= 0:
-            print('Congratulations, ' + name + '!')
-
-
-checking_answers_qcd()

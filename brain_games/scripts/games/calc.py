@@ -1,16 +1,5 @@
-# !/usr/bin/env python3
 import prompt
 from random import randint
-
-
-print('brain-calc')
-
-
-# def main():
-#     print('Welcome to the Brain Games!')
-#
-#
-# main()
 
 
 def types_operation():
@@ -34,14 +23,20 @@ def types_operation():
 
 
 def checking_answers():
+    print('brain-calc')
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'{"Hello, " + name + "!"}')
     print('What is the result of the expression?')
 
     # life - кол-во жизней
+    n = 0
     life = 3
-    while life > 0:
-        life = life - 1
+    for life in range(0, life + 1):
+        n += life
+        if life == 3:
+            print('Congratulations, ' + name + '!')
+            break
         result_expressions = types_operation()
         answer = int(input('Your answer: '))
 
@@ -54,9 +49,3 @@ def checking_answers():
                   f"'{result_expressions}'" + ". "
                   "Let's try again,", name + "!")
             break
-
-        if life <= 0:
-            print('Congratulations, ' + name + '!')
-
-
-checking_answers()

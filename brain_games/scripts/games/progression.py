@@ -1,9 +1,5 @@
-# !/usr/bin/env python3
 import prompt
 from random import randint
-
-
-print('brain-progression')
 
 
 def result_progression():
@@ -22,17 +18,13 @@ def result_progression():
             print('Congratulations, ' + name + '!')
             break
 
-        def arithmetic_progression():
-            progression_1 = randint(1, 10)
-            progression_2 = randint(1, 200)
-            i = []
-            y = 10
-            for y in range(1, y + 1, 1):
-                progression_2 = progression_2 + progression_1
-                i.append(progression_2)
-            return i
-
-        i = arithmetic_progression()
+        progression_1 = randint(1, 10)
+        progression_2 = randint(1, 200)
+        i = []
+        y = 10
+        for y in range(1, y + 1, 1):
+            progression_2 = progression_2 + progression_1
+            i.append(progression_2)
 
         min_progres = 6
         max_progres = randint(0, 10)
@@ -57,6 +49,3 @@ def result_progression():
                   f"'{progres[num_input]}'" + ". "
                   "Let's try again,", name + "!")
             break
-
-
-result_progression()
