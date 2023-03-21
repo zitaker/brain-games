@@ -1,22 +1,9 @@
-# !/usr/bin/env python3
 import prompt
 from random import randint
 
 
-print('brain-prime')
-
-
-# def main():
-#     print('Welcome to the Brain Games!')
-#
-#
-# main()
-
-
-n = 100
-
-
 def simple_number_list():
+    n = 100
     simple_numbers = []
     for i in range(2, n + 1):
         for j in range(2, i):
@@ -24,13 +11,15 @@ def simple_number_list():
                 break
         else:
             simple_numbers.append(i)
+
     return simple_numbers
 
 
-simple_numbers = simple_number_list()
-
-
 def result_prime():
+    simple_numbers = simple_number_list()
+
+    print('brain-prime')
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'{"Hello, " + name + "!"}')
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
@@ -47,27 +36,20 @@ def result_prime():
         numbers = randint(0, 100)
         print('Question:', numbers)
 
-        def numbers_verification():
-            if numbers in simple_numbers:
-                correct = 'yes'
-            elif numbers not in simple_numbers:
-                correct = 'no'
+        num_input = input('Your answer: ')
 
-            return correct
+        if numbers in simple_numbers:
+            correct = 'yes'
+        elif numbers not in simple_numbers:
+            correct = 'no'
 
-        correct = numbers_verification()
-
-        numbers_input = input('Your answer: ')
-
-        if numbers_input == correct:
+        if (numbers in simple_numbers and num_input == 'yes')\
+                or (numbers not in simple_numbers and num_input == 'no'):
             print('Correct!')
         else:
-            print(f"'{numbers_input}'",
+            print(f"'{num_input}'",
                   "is wrong answer ;(. "
                   "Correct answer was",
                   f"'{correct}'" + ". "
                   "Let's try again,", name + "!")
             break
-
-
-result_prime()
