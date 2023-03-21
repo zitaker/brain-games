@@ -12,11 +12,11 @@ Welcome to the Brain Games!
 
 After successful installation, enter the name of the game:  
 
-```brain-even``` https://asciinema.org/a/aWnomMkI6AwLGLI8DrvdVOBkz    
-```brain-calc``` https://asciinema.org/a/bfeq9oF44WFzvcUmorBT4F79v  
-```brain-gcd``` https://asciinema.org/a/41YklAOKQWcSZByT2GdYwY4Wc  
-```brain-progression``` https://asciinema.org/a/FNUpbOPTC0tQXvS7aWFqOxikF  
-```brain-prime``` https://asciinema.org/a/ERQPEC650ojeEWBQCkGsREksb 
+```brain-even``` https://asciinema.org/a/iHEl3k8noQTr8mTKp416TrRyk    
+```brain-calc``` https://asciinema.org/a/ZViTFmSxbGfm4895OkYg9rbB1  
+```brain-gcd``` https://asciinema.org/a/3fWY23cyJckhecj9RlMgiAHqP  
+```brain-progression``` https://asciinema.org/a/TKMzAji0FXWsXdUMSDCKSRHqe  
+```brain-prime``` https://asciinema.org/a/JKQEIPhe0v6dmaYowA3MqLoiO  
 
 ### Minimum requirements:
 1) Linux os.  
