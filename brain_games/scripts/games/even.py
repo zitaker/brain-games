@@ -10,12 +10,12 @@ def life_user():
     print('Answer "yes" if the number is even, '
           'otherwise answer "no".')
 
-    # life - кол-во жизней
-    n = 0
-    life = 3
-    for life in range(0, life + 1):
-        n += life
-        if life == 3:
+    # LIFE - кол-во жизней
+    N = 0
+    LIFE = 3
+    for LIFE in range(0, LIFE + 1):
+        N += LIFE
+        if LIFE == 3:
             print('Congratulations, ' + name + '!')
             break
 
