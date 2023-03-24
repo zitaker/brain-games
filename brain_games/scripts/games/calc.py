@@ -1,52 +1,32 @@
-import prompt
 from random import randint
 
 
-def types_operation():
+def brain():
+    print('brain-calc')
+
+
+def condition():
+    print('What is the result of the expression?')
+
+
+def question_task():
     number_1 = randint(0, 10)
     number_2 = randint(0, 10)
 
     result = randint(0, 2)
 
     if result == 0:
-        result_expression = (number_1 + number_2)
+        correct = (number_1 + number_2)
         operations = '+'
     elif result == 1:
-        result_expression = (number_1 - number_2)
+        correct = (number_1 - number_2)
         operations = '-'
     else:
-        result_expression = (number_1 * number_2)
+        correct = (number_1 * number_2)
         operations = '*'
 
-    print('Question:', number_1, operations, number_2)
-    return result_expression
+    question = f'{number_1} {operations} {number_2}'
 
+    type_input = int
 
-def checking_answers():
-    print('brain-calc')
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'{"Hello, " + name + "!"}')
-    print('What is the result of the expression?')
-
-    # LIFE - кол-во жизней
-    N = 0
-    LIFE = 3
-    for LIFE in range(0, LIFE + 1):
-        N += LIFE
-        if LIFE == 3:
-            print('Congratulations, ' + name + '!')
-            break
-        result_expressions = types_operation()
-        answers = input('Your answer: ')
-        answer = int(answers)
-
-        if answer == result_expressions:
-            print('Correct!')
-        else:
-            print(f"'{answer}'",
-                  "is wrong answer ;(. "
-                  "Correct answer was",
-                  f"'{result_expressions}'" + ". "
-                  "Let's try again,", name + "!")
-            break
+    return question, correct, type_input
