@@ -39,7 +39,8 @@ def result_progression():
         num_replace = str(progres_str).replace(str(progres[num_input]), points)
         print('Question:', num_replace)
 
-        comparison_num_input = int(input('Your answer: '))
+        comparisons_num_input = input('Your answer: ')
+        comparison_num_input = int(comparisons_num_input)
         if comparison_num_input is progres[num_input]:
             print('Correct!')
         elif comparison_num_input is not progres[num_input]:

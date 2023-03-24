@@ -25,7 +25,8 @@ def checking_answers_qcd():
         print('Question:', numbers_1, numbers_2)
         result_gcd = math.gcd(numbers_1, numbers_2)
 
-        answer = int(input('Your answer: '))
+        answers = input('Your answer: ')
+        answer = int(answers)
 
         if answer == result_gcd:
             print('Correct!')

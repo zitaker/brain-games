@@ -38,7 +38,8 @@ def checking_answers():
             print('Congratulations, ' + name + '!')
             break
         result_expressions = types_operation()
-        answer = int(input('Your answer: '))
+        answers = input('Your answer: ')
+        answer = int(answers)
 
         if answer == result_expressions:
             print('Correct!')
