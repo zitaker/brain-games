@@ -29,7 +29,7 @@ def life_user(manual):
                   "Correct answer was",
                   f"'{correct}'" + ". "
                   "Let's try again,", name + "!")
-            break
+            exit()
 
         if LIFE == 3:
             print('Congratulations, ' + name + '!')
