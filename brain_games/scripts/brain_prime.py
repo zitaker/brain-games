@@ -1,9 +1,10 @@
 # !/usr/bin/env python3
-from brain_games.scripts.games.prime import result_prime
+from brain_games.scripts.games.brain_logic import life_user
+from brain_games.scripts.games import prime
 
 
 def main():
-    result_prime()
+    life_user(prime)
 
 
 if __name__ == '__main__':

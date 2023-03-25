@@ -1,8 +1,16 @@
-import prompt
 from random import randint
+import math
 
 
-def simple_number_list():
+def brain():
+    print('brain-prime')
+
+
+def condition():
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+
+
+def question_task():
     n = 100
     simple_numbers = []
     for i in range(2, n + 1):
@@ -12,44 +20,13 @@ def simple_number_list():
         else:
             simple_numbers.append(i)
 
-    return simple_numbers
+    question = randint(0, 100)
 
+    if question in simple_numbers:
+        correct = 'yes'
+    elif question not in simple_numbers:
+        correct = 'no'
 
-def result_prime():
-    simple_numbers = simple_number_list()
+    type_input = str
 
-    print('brain-prime')
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'{"Hello, " + name + "!"}')
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-
-    # LIFE - кол-во жизней
-    N = 0
-    LIFE = 3
-    for LIFE in range(0, LIFE + 1):
-        N += LIFE
-        if LIFE == 3:
-            print('Congratulations, ' + name + '!')
-            break
-
-        numbers = randint(0, 100)
-        print('Question:', numbers)
-
-        num_input = input('Your answer: ')
-
-        if numbers in simple_numbers:
-            correct = 'yes'
-        elif numbers not in simple_numbers:
-            correct = 'no'
-
-        if (numbers in simple_numbers and num_input == 'yes')\
-                or (numbers not in simple_numbers and num_input == 'no'):
-            print('Correct!')
-        else:
-            print(f"'{num_input}'",
-                  "is wrong answer ;(. "
-                  "Correct answer was",
-                  f"'{correct}'" + ". "
-                  "Let's try again,", name + "!")
-            break
+    return question, correct, type_input
