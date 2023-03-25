@@ -23,13 +23,13 @@ def life_user(manual):
 
         if correct == question_input:
             print('Correct!')
-        elif correct != question_input:
+        else:
             print(f"'{question_input}'",
                   "is wrong answer ;(. "
                   "Correct answer was",
                   f"'{correct}'" + ". "
                   "Let's try again,", name + "!")
-            exit()
+            break
 
         if LIFE == 3:
             print('Congratulations, ' + name + '!')
