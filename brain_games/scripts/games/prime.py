@@ -9,7 +9,7 @@ def condition():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
 
-def question_task():
+def simples():
     n = 100
     simple_numbers = []
     for i in range(2, n + 1):
@@ -18,6 +18,12 @@ def question_task():
                 break
         else:
             simple_numbers.append(i)
+
+    return simple_numbers
+
+
+def question_task():
+    simple_numbers = simples()
 
     question = randint(0, 100)
 
