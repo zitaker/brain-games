@@ -1,9 +1,10 @@
 # !/usr/bin/env python3
-from brain_games.scripts.games.gcd import checking_answers_qcd
+from brain_games.scripts.games.brain_logic import life_user
+from brain_games.scripts.games import gcd
 
 
 def main():
-    checking_answers_qcd()
+    life_user(gcd)
 
 
 if __name__ == '__main__':

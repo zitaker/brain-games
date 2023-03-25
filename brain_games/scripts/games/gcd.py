@@ -1,39 +1,23 @@
-import prompt
-import math
 from random import randint
+import math
 
 
-def checking_answers_qcd():
+def brain():
     print('brain-gcd')
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'{"Hello, " + name + "!"}')
+
+
+def condition():
     print('Find the greatest common divisor of given numbers.')
 
-    # LIFE - кол-во жизней
-    N = 0
-    LIFE = 3
-    for LIFE in range(0, LIFE + 1):
-        N += LIFE
-        if LIFE == 3:
-            print('Congratulations, ' + name + '!')
-            break
 
-        numbers_1 = randint(1, 10)
-        numbers_2 = randint(1, 10)
+def question_task():
+    numbers_1 = randint(1, 10)
+    numbers_2 = randint(1, 10)
 
-        print('Question:', numbers_1, numbers_2)
-        result_gcd = math.gcd(numbers_1, numbers_2)
+    question = f'{numbers_1} {numbers_2}'
 
-        answers = input('Your answer: ')
-        answer = int(answers)
+    correct = math.gcd(numbers_1, numbers_2)
 
-        if answer == result_gcd:
-            print('Correct!')
-        else:
-            print(f"'{answer}'",
-                  "is wrong answer ;(. "
-                  "Correct answer was",
-                  f"'{result_gcd}'" + ". "
-                  "Let's try again,", name + "!")
-            break
+    type_input = int
+
+    return question, correct, type_input
