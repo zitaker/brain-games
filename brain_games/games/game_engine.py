@@ -1,6 +1,4 @@
 import prompt
-# from brain_games.games.game_constants import ROUNDS
-
 
 
 def start(manual):

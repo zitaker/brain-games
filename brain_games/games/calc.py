@@ -17,7 +17,7 @@ def task_condition():
     elif operations == '-':
         correct = (number_1 - number_2)
     else:
-        operations = (number_1 * number_2)
+        correct = (number_1 * number_2)
 
     question = f'{number_1} {operations} {number_2}'
     type_input = int
