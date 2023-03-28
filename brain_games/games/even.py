@@ -1,16 +1,12 @@
 from random import randint
 
 
-def brain():
-    print('brain-even')
+print('brain-even')
+
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def condition():
-    print('Answer "yes" if the number is even, '
-          'otherwise answer "no".')
-
-
-def question_task():
+def task_condition():
     question = randint(0, 100)
 
     if question % 2 == 0:

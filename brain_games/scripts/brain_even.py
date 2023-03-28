@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.scripts.games.brain_logic import life_user
-from brain_games.scripts.games import even
+from brain_games.games.game_engine import start
+from brain_games.games import even
 
 
 def main():
-    life_user(even)
+    start(even)
 
 
 if __name__ == '__main__':

@@ -1,12 +1,10 @@
 from random import randint
 
 
-def brain():
-    print('brain-prime')
+print('brain-prime')
 
 
-def condition():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def simples():
@@ -22,7 +20,7 @@ def simples():
     return simple_numbers
 
 
-def question_task():
+def task_condition():
     simple_numbers = simples()
 
     question = randint(0, 100)

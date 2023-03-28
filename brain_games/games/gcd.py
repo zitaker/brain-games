@@ -2,15 +2,13 @@ from random import randint
 import math
 
 
-def brain():
-    print('brain-gcd')
+print('brain-gcd')
 
 
-def condition():
-    print('Find the greatest common divisor of given numbers.')
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def question_task():
+def task_condition():
     numbers_1 = randint(1, 10)
     numbers_2 = randint(1, 10)
 

@@ -1,23 +1,17 @@
 import prompt
+# from brain_games.games.game_constants import ROUNDS
 
 
-def welcome_user():
+
+def start(manual):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'{"Hello, " + name + "!"}')
-    return name
 
-
-def life_user(manual):
-    manual.brain()
-    name = welcome_user()
-    manual.condition()
-    # LIFE - кол-во жизней
-    N = 0
-    LIFE = 3
-    for LIFE in range(1, LIFE + 1):
-        N += LIFE
-        question, correct, type_input = manual.question_task()
+    print(manual.DESCRIPTION)
+    ROUNDS = 3
+    for ROUNDS in range(1, ROUNDS + 1):
+        question, correct, type_input = manual.task_condition()
         print('Question:', question)
         question_input = type_input(input('Your answer: '))
 
@@ -31,6 +25,5 @@ def life_user(manual):
                   "Let's try again,", name + "!")
             break
 
-        if LIFE == 3:
-            print('Congratulations, ' + name + '!')
-            break
+    print('Congratulations, ' + name + '!')
+    return

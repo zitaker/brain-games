@@ -1,10 +1,10 @@
 # !/usr/bin/env python3
-from brain_games.scripts.games.brain_logic import life_user
-from brain_games.scripts.games import prime
+from brain_games.games.game_engine import start
+from brain_games.games import prime
 
 
 def main():
-    life_user(prime)
+    start(prime)
 
 
 if __name__ == '__main__':

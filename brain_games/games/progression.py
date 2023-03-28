@@ -1,27 +1,26 @@
 from random import randint
 
 
-def brain():
-    print('brain-progression')
+print('brain-progression')
 
 
-def condition():
-    print('What number is missing in the progression?')
+DESCRIPTION = 'What number is missing in the progression?'
 
 
-def question_task():
-    progression_1 = randint(1, 10)
-    progression_2 = randint(1, 200)
+def task_condition():
+    increase_by_number = randint(1, 10)
+    first_number = randint(1, 200)
+    # i - список прогрессии длинною равной (y)
     i = []
     y = 10
     for y in range(1, y + 1, 1):
-        progression_2 = progression_2 + progression_1
-        i.append(progression_2)
+        first_number = first_number + increase_by_number
+        i.append(first_number)
 
     min_progres = 6
     max_progres = randint(0, 10)
 
-    #   progres - список
+    #   progres - список прогрессии
     progres = (i[0:min_progres]) + (i[min_progres:max_progres])
 
     #   num_input - номер числа по индексу в рандомном списке
