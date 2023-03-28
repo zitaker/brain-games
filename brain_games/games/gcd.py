@@ -1,5 +1,4 @@
 from random import randint
-import math
 
 
 print('brain-gcd')
@@ -14,6 +13,13 @@ def task_condition():
 
     question = f'{numbers_1} {numbers_2}'
 
-    correct = math.gcd(numbers_1, numbers_2)
+    while numbers_1 != 0 and numbers_2 != 0:
+        if numbers_1 > numbers_2:
+            numbers_1 = numbers_1 % numbers_2
+        else:
+            numbers_2 = numbers_2 % numbers_1
+    gcd = (numbers_1 + numbers_2)
+
+    correct = str(gcd)
 
     return question, correct
