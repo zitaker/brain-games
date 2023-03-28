@@ -14,6 +14,4 @@ def task_condition():
     elif question % 2 != 0:
         correct = 'no'
 
-    type_input = str
-
-    return question, correct, type_input
+    return question, correct

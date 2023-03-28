@@ -30,6 +30,4 @@ def task_condition():
     elif question not in simple_numbers:
         correct = 'no'
 
-    type_input = str
-
-    return question, correct, type_input
+    return question, correct

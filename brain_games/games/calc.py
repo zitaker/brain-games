@@ -13,13 +13,12 @@ def task_condition():
     operations = choice('+-*')
 
     if operations == '+':
-        correct = (number_1 + number_2)
+        correct = str(number_1 + number_2)
     elif operations == '-':
-        correct = (number_1 - number_2)
+        correct = str(number_1 - number_2)
     else:
-        correct = (number_1 * number_2)
+        correct = str(number_1 * number_2)
 
     question = f'{number_1} {operations} {number_2}'
-    type_input = int
 
-    return question, correct, type_input
+    return question, correct

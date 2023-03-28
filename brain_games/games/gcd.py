@@ -16,6 +16,4 @@ def task_condition():
 
     correct = math.gcd(numbers_1, numbers_2)
 
-    type_input = int
-
-    return question, correct, type_input
+    return question, correct

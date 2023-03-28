@@ -9,9 +9,9 @@ def start(manual):
     print(manual.DESCRIPTION)
     ROUNDS = 3
     for ROUNDS in range(1, ROUNDS + 1):
-        question, correct, type_input = manual.task_condition()
+        question, correct = manual.task_condition()
         print('Question:', question)
-        question_input = type_input(input('Your answer: '))
+        question_input = input('Your answer: ')
 
         if correct == question_input:
             print('Correct!')

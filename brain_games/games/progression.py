@@ -30,8 +30,6 @@ def task_condition():
     progres_str = (" ".join(map(str, progres)))
     question = str(progres_str).replace(str(progres[num_input]), points)
 
-    correct = progres[num_input]
+    correct = str(progres[num_input])
 
-    type_input = int
-
-    return question, correct, type_input
+    return question, correct
