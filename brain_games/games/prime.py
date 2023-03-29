@@ -3,31 +3,29 @@ from random import randint
 
 print('brain-prime')
 
-
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def simples():
-    n = 100
-    simple_numbers = []
-    for i in range(2, n + 1):
-        for j in range(2, i):
-            if i % j == 0:
-                break
-        else:
-            simple_numbers.append(i)
+def is_prime():
+    question = randint(2, 100)
+    n = 0
 
-    return simple_numbers
+    for i in range(2, question // 1):
+        if question % i == 0:
+            n = n + 1
+    if n <= 0:
+        result = True
+    else:
+        result = False
+    return result, question
 
 
 def task_condition():
-    simple_numbers = simples()
+    result, question = is_prime()
 
-    question = randint(0, 100)
-
-    if question in simple_numbers:
+    if result is True:
         correct = 'yes'
-    elif question not in simple_numbers:
+    elif result is False:
         correct = 'no'
 
     return question, correct
