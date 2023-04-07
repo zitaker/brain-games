@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.3.1"
+version = "0.3.2"
 description = "Brain Games!"
 authors = ["georg <georbearwolf.com>"]
 readme = "README.md"

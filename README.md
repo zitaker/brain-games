@@ -19,7 +19,6 @@ After successful installation, enter the name of the game:
 ```brain-progression``` https://asciinema.org/a/TKMzAji0FXWsXdUMSDCKSRHqe  
 ```brain-prime``` https://asciinema.org/a/JKQEIPhe0v6dmaYowA3MqLoiO  
 
-### Minimum requirements:
-1) Linux os.  
-2) python 3.8.1.  
-3) pip.  
+### Minimum requirements:  
+1) python 3.8.1.  
+2) pip.  
